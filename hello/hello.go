@@ -8,8 +8,12 @@ import (
 )
 
 func main() {
-	// Get a greeting message and print it.
-	message, err := greetings.Hello("")
+	// Setting log prefix and other log properties.
+	// setting flag to disable printing
+	log.SetPrefix("greetings: ")
+	log.SetFlags(0)
+
+	message, err := greetings.Hello("Kelvin")
 
 	if err != nil {
 		log.Fatal(err)
